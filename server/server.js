@@ -11,6 +11,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
@@ -21,6 +22,6 @@ app.get("/", (req, res) => {
     res.send("Notes App Backend Running");
 });
 
-app.listen(process.env.PORT, () =>{
-    console.log("Server running on port", process.env.PORT);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
