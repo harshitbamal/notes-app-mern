@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const loadNotes = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notes", {
+      const res = await axios.get("https://notes-app-mern-m0et.onrender.com/api/notes", {
         headers: { "x-auth-token": token },
       });
 
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/notes",
+        "https://notes-app-mern-m0et.onrender.com/api/notes",
         { title, content },
         { headers: { "x-auth-token": token } }
       );
