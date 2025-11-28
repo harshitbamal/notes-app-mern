@@ -54,7 +54,7 @@ const Dashboard = () => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+      await axios.delete(`https://notes-app-mern-m0et.onrender.com/api/notes/${id}`, {
         headers: { "x-auth-token": token },
       });
 
@@ -74,7 +74,7 @@ const Dashboard = () => {
   const updateNote = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/notes/${editId}`,
+        `https://notes-app-mern-m0et.onrender.com/api/notes/${editId}`,
         { title, content },
         { headers: { "x-auth-token": token } }
       );
